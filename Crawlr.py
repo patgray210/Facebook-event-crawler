@@ -263,7 +263,7 @@ def get_description(tree):
     return event_description
 
 def get_title(tree):
-    event_title = tree.xpath('//h3/text()')  # [0] == date (Friday, November 16, 2018 at 8 PM – 11:55 PM)        [1] == place (Expresszó)
+    event_title = tree.xpath('//h1/text()')  # [0] == date (Friday, November 16, 2018 at 8 PM – 11:55 PM)        [1] == place (Expresszó)
     if (len(event_title) == 0):
         print(event_title)
         pexit(' - get_title() error. len(event_title) == 0')
